@@ -13,6 +13,8 @@ constraintlayout = "2.1.4"
 materialCalendarview = "1.4.3"
 materialCalendarviewVersion = "2.0.0"
 media3Common = "1.4.1"
+junitKtx = "1.2.1"
+monitor = "1.7.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,6 +29,8 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-media3-common = { group = "androidx.media3", name = "media3-common", version.ref = "media3Common" }
 material-calendarview = { module = "com.prolificinteractive:material-calendarview", version.ref = "materialCalendarview" }
 material-calendarview-v200 = { module = "com.prolificinteractive:material-calendarview", version.ref = "materialCalendarviewVersion" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
+androidx-monitor = { group = "androidx.test", name = "monitor", version.ref = "monitor" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
