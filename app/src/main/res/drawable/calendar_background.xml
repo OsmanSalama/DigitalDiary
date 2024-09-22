@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#458588" />
+
+    <stroke
+        android:color="@color/gruvbox_light_fg"
+        android:width="2dp"
+        />
+</shape>

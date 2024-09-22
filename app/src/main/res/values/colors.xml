@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ourGreen">#4CAF50 </color>
+    <color name="toolbarBackgroundGruvboxLight">#ebdbb2 </color>
+    <color name="toolbarTextColour">#3c3836 </color>
+    <color name="mainBackground">#fbf1c7</color>
+    <color name="textColoursGruvboxLight">#fbf1c7</color>
+    <color name="buttonColoursGruvboxLight">#3c3836</color>
+    <color name="hintTextColour">#803c3836</color>
+    <color name="textColourDimmed">#803c3836</color>
+    <color name="noteItemBackground">#3c3836</color>
+    <color name="toUse2">#fbf1c7</color>
+    <color name="toUse3">#fbf1c7</color>
+
+    <color name="gruvbox_light_bg">#fbf1c7</color>
+    <color name="gruvbox_light_fg">#3c3836</color>
+    <color name="gruvbox_light_red">#fb4934</color>
+    <color name="gruvbox_light_green">#b8bb26</color>
+    <color name="gruvbox_light_yellow">#fabd2f</color>
+    <color name="gruvbox_light_blue">#83a598</color>
+    <color name="gruvbox_light_purple">#d3869b</color>
+    <color name="gruvbox_light_aqua">#8ec07c</color>
+    <color name="gruvbox_light_orange">#fe8019</color>
+    <color name="gruvbox_light_gray">#665c54</color>
+</resources>

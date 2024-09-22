@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    android:fitsSystemWindows="true"
+    tools:context=".NoteWritingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="411dp"
+        android:layout_height="64dp"
+        android:background="@color/buttonColoursGruvboxLight"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/editTextNoteTitle"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:autofillHints="name"
+        android:background="@null"
+        android:ems="10"
+        android:hint="@string/untitled"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:text="@string/headerNoteWritingActivity"
+        android:textAlignment="center"
+        android:textColor="@color/textColoursGruvboxLight"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarMain"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="@+id/toolbarMain"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingStart="11dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <EditText
+            android:id="@+id/diaryEntryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="names"
+            android:background="@null"
+            android:fontFamily="@font/patric_hand"
+            android:gravity="top|start"
+            android:hint="@string/diaryEntryBeginningText"
+            android:inputType="textMultiLine|textCapSentences"
+            android:padding="12dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/buttonColoursGruvboxLight"
+            android:textColorHint="@color/hintTextColour"
+            android:textSize="16sp" />
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/textViewDeleteNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/delete"
+        android:textColor="@color/textColoursGruvboxLight"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarMain"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/editTextNoteTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/back_button"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNoteTitle"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/toolbarMain"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_chevron" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonSaveNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/buttonColoursGruvboxLight"
+        android:clickable="true"
+        android:contentDescription="@string/click_to_add_new_note"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/textColoursGruvboxLight"
+        app:srcCompat="@drawable/save_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

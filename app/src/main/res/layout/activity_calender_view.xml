@@ -1,0 +1,180 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    android:fitsSystemWindows="true"
+    tools:context=".CalenderViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="@color/buttonColoursGruvboxLight"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBottom"
+        android:layout_width="415dp"
+        android:layout_height="63dp"
+        android:background="@color/buttonColoursGruvboxLight"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewCalenderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calender_title"
+        android:textColor="@color/textColoursGruvboxLight"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarBottom"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarMain"
+        app:layout_constraintStart_toStartOf="@+id/toolbarMain"
+        app:layout_constraintTop_toTopOf="@+id/toolbarMain"
+        app:layout_constraintVertical_bias="0.04000002" />
+
+    <CalendarView
+        android:id="@+id/calendarMain"
+        android:layout_width="365dp"
+        android:layout_height="346dp"
+        android:background="@drawable/calendar_background"
+        android:dateTextAppearance="@style/CalendarDateText"
+        android:focusedMonthDateColor="@color/black"
+        android:unfocusedMonthDateColor="@color/textColoursGruvboxLight"
+        android:weekDayTextAppearance="@style/CalendarDateText"
+        android:weekNumberColor="@color/textColoursGruvboxLight"
+        app:layout_constraintBottom_toTopOf="@+id/toolbarBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <!-- Add RecyclerView for displaying notes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNotes"
+        android:layout_width="372dp"
+        android:layout_height="268dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbarBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarMain"
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/grid_item" />
+
+    <ImageView
+        android:id="@+id/imageViewCalendar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="23dp"
+        android:contentDescription="@string/contentDescriptionCalendar"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/toolbarBottom"
+        app:srcCompat="@drawable/calendar_light" />
+
+    <ImageView
+        android:id="@+id/imageViewNoteIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="36dp"
+        android:contentDescription="@string/contentDescriptionDiary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewCalendar"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="@+id/toolbarBottom"
+        app:srcCompat="@drawable/note_light" />
+
+    <ImageView
+        android:id="@+id/imageViewSettingPage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="36dp"
+        android:contentDescription="@string/contentDescriptionSetting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.856"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCalendar"
+        app:srcCompat="@drawable/setting_light" />
+
+    <TextView
+        android:id="@+id/textViewNoteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="@string/diary"
+        android:textColor="@color/textColoursGruvboxLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCalendar"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="@string/settings"
+        android:textColor="@color/textColoursGruvboxLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarBottom"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/textViewCalendar" />
+
+    <TextView
+        android:id="@+id/textViewCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="@string/calendar"
+        android:textColor="@color/gruvbox_light_aqua"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/back_button"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCalenderTitle"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="@+id/toolbarMain"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_chevron" />
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="277dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="196dp"
+        android:text="@string/noSavedNotes"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
