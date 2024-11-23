@@ -17,7 +17,10 @@ GruvNote is a lightweight, simple note-taking app that will help you stay organi
 
 ## **Screenshots**  
 
-_Add screenshots of your app in action here (optional)._  
+![image](https://github.com/user-attachments/assets/2ac4d110-b94e-4ad3-8648-346e50d1b2cf)
+
+[Watch the Design Prototype](https://www.youtube.com/watch?v=jDKII0BZSkY&ab_channel=NamsoWorks)
+
 
 ---
 
@@ -35,4 +38,4 @@ Follow these steps to run the GruvNote application on your local machine for dev
 
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/your-username/GruvNote.git  
+   git clone https://github.com/OsmanSalama/DigitalDiary.git  
